@@ -15,46 +15,46 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <>
+      <Suspense>
         <Navbar />
         <LazyHome />
-      </>
+      </Suspense>
     ),
   },
   {
     path: "/servicios",
     element: (
-      <>
+      <Suspense>
         <Navbar />
         <LazyServices />
-      </>
+      </Suspense>
     ),
   },
   {
     path: "/contacto",
     element: (
-      <>
+      <Suspense>
         <Navbar />
         <LazyContact />
-      </>
+      </Suspense>
     ),
   },
   {
     path: "/nosotros",
     element: (
-      <>
+      <Suspense>
         <Navbar />
         <LazyAbout />
-      </>
+      </Suspense>
     ),
   },
   {
     path: "/tienda",
     element: (
-      <>
+      <Suspense>
         <Navbar />
         <LazyShop />
-      </>
+      </Suspense>
     ),
   },
 ]);

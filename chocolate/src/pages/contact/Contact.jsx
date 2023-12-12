@@ -44,8 +44,8 @@ function Contact() {
               <div className=" h-[1px] w-[5vw] bg-black"></div>
             </div>
             <div>
-              <div className=" grid grid-cols-3 w-screen">
-                <div className=" m-8 mx-5 h-fit rounded bg-white flex justify-center items-center">
+              <div className=" grid grid-cols-2 w-screen">
+                <div className=" m-8 mx-20 h-fit rounded bg-white flex justify-center items-center">
                   <div className=" block m-5">
                     <div className=" flex justify-center items-center">
                       <svg
@@ -84,39 +84,8 @@ function Contact() {
                     </div>
                   </div>
                 </div>
-                <div className=" m-8 mx-5 h-fit rounded bg-white flex justify-center items-center">
-                  <div className=" block m-5">
-                    <div className=" flex justify-center items-center">
-                      <svg
-                        className=" h-14 w-auto"
-                        fill="#fcab32"
-                        viewBox="-32 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <div className=" mt-4 ">
-                      <h1 className=" text-center font-bold text-lg">
-                        CONVENCIONAL OFICINA CENTRAL
-                      </h1>
-                    </div>
-                    <div className=" m-5 ">
-                      <h1 className=" text-center font-medium opacity-50 text-base">
-                        (02) 203-6821
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-                <div className=" m-8 mx-5 h-fit rounded bg-white flex justify-center items-center">
+
+                <div className=" m-8 mx-20 h-fit rounded bg-white flex justify-center items-center">
                   <div className=" block m-5">
                     <div className=" flex justify-center items-center">
                       <svg
@@ -151,7 +120,54 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div></div>
+            <div>
+              <div className=" mx-20 my-10 pb-10 h-fit rounded bg-white">
+                <div className=" flex justify-center items-center p-10">
+                  <h1>¡ESTAREMOS FELICES DE RESPONDER!</h1>
+                </div>
+                <form className=" block" action="">
+                  <div className=" grid grid-cols-2">
+                    <div className=" flex justify-end items-center mx-8">
+                      <h1></h1>
+                      <input
+                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        type="text"
+                        placeholder=" Nombre"
+                      />
+                    </div>
+                    <div className=" flex justify-start items-center mx-8">
+                      <h1></h1>
+                      <input
+                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        type="text"
+                        placeholder=" Asunto"
+                      />
+                    </div>
+                    <div className=" flex justify-end items-center mx-8">
+                      <h1></h1>
+                      <input
+                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        type="text"
+                        placeholder=" Email"
+                      />
+                    </div>
+                    <div></div>
+                  </div>
+                  <div className=" flex justify-center items-center mx-72 border border-slate-300 rounded mt-9">
+                    <textarea
+                      type="text"
+                      className=" h-56 w-full"
+                      placeholder=" Mensaje"
+                    />
+                  </div>
+                  <div className=" flex justify-center items-center mt-5">
+                    <button className=" bg-[#fcab32] hover:bg-[#f7aa52] rounded py-3 px-8">
+                      ENVIAR
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>

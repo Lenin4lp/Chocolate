@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer";
 
 function Contact() {
   return (
@@ -13,14 +14,14 @@ function Contact() {
         <div className=" h-screen w-screen flex justify-center items-center">
           <div>
             <div className=" block">
-              <h1 className=" text-[45px] text-center font-bold m-10 text-white">
+              <h1 className=" text-2xl md:text-3xl lg:text-[45px] text-center font-bold m-5 md:m-10 text-white">
                 CONVIÉRTETE EN LEYENDA
               </h1>
               <div className=" flex justify-center items-center">
-                <div className=" m-3 h-[2px] w-[20vw] bg-white"></div>
+                <div className=" md:m-3 h-[2px] w-[20vw] bg-white"></div>
               </div>
 
-              <p className=" text-center text-2xl mt-10 mx-20 font-normal text-white">
+              <p className=" text-center text-base md:text-xl lg:text-2xl mt-10 mx-10 md:mx-20 font-normal text-white">
                 NO TODOS PUEDEN HACER LEYENDA, PERO TÚ PUEDES CONVERTIRTE EN
                 UNA. DECÍDETE A DISTRIBUIR PRODUCTOS ÚNICOS QUE CREAN UNA
                 HISTORIA ECUATORIANA
@@ -30,22 +31,22 @@ function Contact() {
         </div>
         <div className=" h-fit w-screen bg-[#e9e9e9] flex justify-center items-center">
           <div className=" block">
-            <div className=" h-fit mt-20 mb-1">
-              <p className=" text-lg text-center font-bold">
+            <div className=" h-fit mt-8 md:mt-20 mb-1">
+              <p className=" text-base md:text-lg text-center font-bold">
                 ¿Tienes alguna consulta?
               </p>
             </div>
             <div>
-              <h1 className=" text-center text-[40px] font-bold">
+              <h1 className=" text-center text-xl md:text-[40px] font-bold">
                 Estamos aquí para ayudar
               </h1>
             </div>
-            <div className=" flex justify-center items-center mt-4">
+            <div className=" flex justify-center items-center mt-5 md:mt-10">
               <div className=" h-[1px] w-[5vw] bg-black"></div>
             </div>
             <div>
-              <div className=" grid grid-cols-2 w-screen">
-                <div className=" m-8 mx-20 h-fit rounded bg-white flex justify-center items-center">
+              <div className=" grid grid-cols-1 md:grid-cols-2 md:w-screen">
+                <div className=" m-2 md:m-8 mx-20 h-fit rounded bg-white flex justify-center items-center">
                   <div className=" block m-5">
                     <div className=" flex justify-center items-center">
                       <svg
@@ -73,19 +74,19 @@ function Contact() {
                       </svg>
                     </div>
                     <div className=" mt-4 ">
-                      <h1 className=" text-center font-bold text-lg">
+                      <h1 className=" text-center font-bold text-base md:text-lg">
                         CORREO OFICINA CENTRAL
                       </h1>
                     </div>
                     <div className=" m-5 ">
-                      <h1 className=" text-center font-medium opacity-50 text-base">
+                      <h1 className=" text-center font-medium opacity-50 text-sm md:text-base">
                         info@chocoleyenda.com
                       </h1>
                     </div>
                   </div>
                 </div>
 
-                <div className=" m-8 mx-20 h-fit rounded bg-white flex justify-center items-center">
+                <div className=" m-2 md:m-8 mx-20 h-fit rounded bg-white flex justify-center items-center">
                   <div className=" block m-5">
                     <div className=" flex justify-center items-center">
                       <svg
@@ -107,12 +108,12 @@ function Contact() {
                       </svg>
                     </div>
                     <div className=" mt-4 ">
-                      <h1 className=" text-center font-bold text-lg">
+                      <h1 className=" text-center font-bold text-base md:text-lg">
                         TELÉFONO OFICINA CENTRAL
                       </h1>
                     </div>
                     <div className=" m-5 ">
-                      <h1 className=" text-center font-medium opacity-50 text-base">
+                      <h1 className=" text-center font-medium opacity-50 text-sm md:text-base">
                         +593 95 974 0349
                       </h1>
                     </div>
@@ -121,13 +122,13 @@ function Contact() {
               </div>
             </div>
             <div>
-              <div className=" mx-20 my-10 pb-10 h-fit rounded bg-white">
+              <div className=" w-screen md:w-auto mx-20 my-10 pb-10 h-fit rounded bg-white">
                 <div className=" flex justify-center items-center p-10">
                   <h1>¡ESTAREMOS FELICES DE RESPONDER!</h1>
                 </div>
                 <form className=" block" action="">
-                  <div className=" grid grid-cols-2">
-                    <div className=" flex justify-end items-center mx-8">
+                  <div className=" grid grid-cols-1 md:grid-cols-2">
+                    <div className=" flex justify-center md:justify-end items-center mx-8">
                       <h1></h1>
                       <input
                         className=" border border-slate-300 rounded m-5 w-60 h-9"
@@ -135,15 +136,7 @@ function Contact() {
                         placeholder=" Nombre"
                       />
                     </div>
-                    <div className=" flex justify-start items-center mx-8">
-                      <h1></h1>
-                      <input
-                        className=" border border-slate-300 rounded m-5 w-60 h-9"
-                        type="text"
-                        placeholder=" Asunto"
-                      />
-                    </div>
-                    <div className=" flex justify-end items-center mx-8">
+                    <div className=" flex justify-center md:justify-start items-center mx-8">
                       <h1></h1>
                       <input
                         className=" border border-slate-300 rounded m-5 w-60 h-9"
@@ -151,9 +144,18 @@ function Contact() {
                         placeholder=" Email"
                       />
                     </div>
+                    <div className=" flex justify-center md:justify-end items-center mx-8">
+                      <h1></h1>
+                      <input
+                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        type="text"
+                        placeholder=" Asunto"
+                      />
+                    </div>
+
                     <div></div>
                   </div>
-                  <div className=" flex justify-center items-center mx-72 border border-slate-300 rounded mt-9">
+                  <div className=" flex justify-center items-center mx-5 md:mx-32 lg:mx-72 border border-slate-300 rounded mt-9">
                     <textarea
                       type="text"
                       className=" h-56 w-full"
@@ -161,7 +163,7 @@ function Contact() {
                     />
                   </div>
                   <div className=" flex justify-center items-center mt-5">
-                    <button className=" bg-[#fcab32] hover:bg-[#f7aa52] rounded py-3 px-8">
+                    <button className=" bg-[#f9c349] hover:bg-[#fcb900] rounded py-3 px-8">
                       ENVIAR
                     </button>
                   </div>
@@ -170,6 +172,7 @@ function Contact() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

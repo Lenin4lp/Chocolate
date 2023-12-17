@@ -10,7 +10,7 @@ function Navbar() {
   ];
   let [open, setOpen] = useState(false);
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 z-50">
+    <div className="shadow-md w-screen fixed top-0 left-0 z-10">
       <div className="md:flex items-center justify-between bg-black/[0.9] md:bg-black/[0.7] bg- py-4 md:px-10 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
@@ -53,7 +53,7 @@ function Navbar() {
             </li>
           ))}
           <li>
-            <button className=" px-5 py-3 rounded bg-[#c79f31] hover:bg-[#c78b31] mx-8 font-semibold duration-500">
+            <button className=" px-5 py-3 rounded bg-[#f9c349] hover:bg-[#fcb900] mx-8 font-semibold duration-500">
               Cotizar
             </button>
           </li>

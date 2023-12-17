@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "../../components/Slider";
+import Footer from "../../components/Footer";
 
 function Home() {
   let slides = [
@@ -17,7 +18,7 @@ function Home() {
       />
       <div className="absolute w-screen h-screen bg-black/60 z-[-1]"></div>
       <div className=" block z-30">
-        <div className=" h-[16vh] md:h-screen w-screen bg-cover bg-[url('https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284046&authkey=%21AAxdRKKpGSb5Y3o&width=2048&height=1280')]">
+        <div className=" h-[87px] md:h-screen w-screen bg-cover bg-[url('https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284046&authkey=%21AAxdRKKpGSb5Y3o&width=2048&height=1280')]">
           <div className=" flex justify-center items-center">
             <h1></h1>
           </div>
@@ -100,6 +101,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

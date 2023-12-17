@@ -4,7 +4,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-
+import OutletRoutes from "./pages/OutletRoutes.jsx";
+import Footer from "./components/Footer.jsx";
 const LazyHome = React.lazy(() => import("./pages/home/Home.jsx"));
 const LazyServices = React.lazy(() => import("./pages/services/Services.jsx"));
 const LazyContact = React.lazy(() => import("./pages/contact/Contact.jsx"));
@@ -14,48 +15,49 @@ const LazyShop = React.lazy(() => import("./pages/shop/Shop.jsx"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Suspense>
-        <Navbar />
-        <LazyHome />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/servicios",
-    element: (
-      <Suspense>
-        <Navbar />
-        <LazyServices />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/contacto",
-    element: (
-      <Suspense>
-        <Navbar />
-        <LazyContact />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/nosotros",
-    element: (
-      <Suspense>
-        <Navbar />
-        <LazyAbout />
-      </Suspense>
-    ),
-  },
-  {
-    path: "/tienda",
-    element: (
-      <Suspense>
-        <Navbar />
-        <LazyShop />
-      </Suspense>
-    ),
+    element: <OutletRoutes />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <Suspense>
+            <LazyHome />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/servicios",
+        element: (
+          <Suspense>
+            <LazyServices />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/contacto",
+        element: (
+          <Suspense>
+            <LazyContact />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/nosotros",
+        element: (
+          <Suspense>
+            <LazyAbout />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/tienda",
+        element: (
+          <Suspense>
+            <LazyShop />
+          </Suspense>
+        ),
+      },
+    ],
   },
 ]);
 

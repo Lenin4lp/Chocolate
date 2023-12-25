@@ -3,93 +3,52 @@ import {
   Table,
   Column,
   DataType,
-  ForeignKey,
-  AutoIncrement,
-  BelongsToMany,
+  BeforeCreate,
+  HasMany,
 } from "sequelize-typescript";
 import { v4 as uuidv4 } from "uuid";
-import { Product } from "./product.model";
+import { OrderDetail } from "./order_detail.model";
 
 @Table({ tableName: "order", timestamps: true })
 export class Order extends Model {
-  @AutoIncrement
   @Column({
-    type: DataType.INTEGER,
+    type: DataType.STRING(10),
     primaryKey: true,
     allowNull: true,
-    field: "id_orden",
+    field: "id_order",
     unique: true,
   })
   order_id!: string;
 
   @Column({
-    type: DataType.STRING(30),
+    type: DataType.DECIMAL(7, 2),
     allowNull: false,
-    field: "nombre_usuario",
+    field: "monto",
   })
-  user_name!: string;
-
-  @Column({
-    type: DataType.STRING(20),
-    allowNull: false,
-    field: "region",
-  })
-  user_region!: string;
-
-  @Column({
-    type: DataType.STRING(20),
-    allowNull: false,
-    field: "ciudad",
-  })
-  user_city!: string;
-
-  @Column({
-    type: DataType.STRING(20),
-    allowNull: false,
-    field: "provincia",
-  })
-  user_state!: string;
+  amount!: string;
 
   @Column({
     type: DataType.STRING(10),
     allowNull: false,
-    field: "codigo_postal",
+    field: "email_orden",
   })
-  postal_code!: string;
+  order_email!: string;
 
   @Column({
-    type: DataType.STRING(150),
+    type: DataType.STRING(10),
     allowNull: false,
-    field: "direccion",
+    field: "estado_orden",
   })
-  address!: string;
+  order_status!: string;
 
-  @Column({
-    type: DataType.STRING(30),
-    allowNull: false,
-    field: "user_email",
-  })
-  user_email!: string;
+  @HasMany(() => OrderDetail)
+  order_details!: OrderDetail[];
 
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    field: "costo_total",
-  })
-  total_cost!: number;
+  @BeforeCreate
+  static async createUUID(order: Order) {
+    const randomNumber = Math.floor(1000000000 + Math.random() * 9000000000);
+    const orderId = randomNumber.toString();
 
-  @Column({
-    type: DataType.STRING(20),
-    allowNull: false,
-    field: "cantidad_producto",
-  })
-  quantity!: string;
-
-  @BelongsToMany(() => Product, {
-    through: "order_product",
-    foreignKey: "id_orden",
-    otherKey: "id_producto",
-    timestamps: true,
-  })
-  products!: Product[];
+    order.order_id = orderId;
+  }
 }

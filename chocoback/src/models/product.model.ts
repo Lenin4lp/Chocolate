@@ -6,9 +6,11 @@ import {
   ForeignKey,
   BeforeCreate,
   BelongsToMany,
+  HasMany,
 } from "sequelize-typescript";
 import { v4 as uuidv4 } from "uuid";
-import { Order } from "./order.model";
+import { Category } from "./categories.model";
+import { OrderDetail } from "./order_detail.model";
 
 @Table({ tableName: "products", timestamps: false })
 export class Product extends Model {
@@ -63,12 +65,17 @@ export class Product extends Model {
   })
   product_category!: string;
 
-  @BelongsToMany(() => Order, {
-    through: "order_product",
+  @BelongsToMany(() => Category, {
+    through: "categoria_producto",
     foreignKey: "id_producto",
-    otherKey: "id_orden",
-    timestamps: true,
+    otherKey: "id_categoria",
+    timestamps: false,
   })
+  categories!: Category[];
+
+  @HasMany(() => OrderDetail)
+  order_details!: OrderDetail[];
+
   @BeforeCreate
   static async createUUID(product: Product) {
     const uuid = uuidv4().substring(0, 10);

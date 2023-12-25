@@ -1,7 +1,10 @@
 import { Sequelize } from "sequelize-typescript";
 import "dotenv/config";
 import { Product } from "../models/product.model";
+import { Category } from "../models/categories.model";
+import { Customer } from "../models/customer.model";
 import { Order } from "../models/order.model";
+import { OrderDetail } from "../models/order_detail.model";
 
 export const connection = new Sequelize({
   dialect: "mysql",
@@ -10,7 +13,7 @@ export const connection = new Sequelize({
   username: "root",
   password: process.env.DB_PASS,
   database: "chocolatedb",
-  models: [Product, Order],
+  models: [Category, Product, Customer, Order, OrderDetail],
   sync: { alter: true },
 });
 

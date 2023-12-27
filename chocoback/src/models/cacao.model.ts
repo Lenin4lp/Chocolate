@@ -3,34 +3,33 @@ import {
   Table,
   Column,
   DataType,
-  BelongsToMany,
   AutoIncrement,
+  BelongsToMany,
 } from "sequelize-typescript";
-import { v4 as uuidv4 } from "uuid";
 import { Product } from "./product.model";
 
-@Table({ tableName: "category", timestamps: false })
-export class Category extends Model {
+@Table({ tableName: "cacao", timestamps: false })
+export class Cacao extends Model {
   @AutoIncrement
   @Column({
     type: DataType.INTEGER,
     primaryKey: true,
     allowNull: false,
-    field: "id_categoria",
+    field: "id_cacao",
     unique: true,
   })
-  category_id!: number;
+  cacao_id!: number;
 
   @Column({
-    type: DataType.STRING(30),
+    type: DataType.STRING(10),
     allowNull: false,
-    field: "nombre_categoria",
+    field: "porcentaje_cacao",
   })
-  category_name!: string;
+  cocoa_percentage!: string;
 
   @BelongsToMany(() => Product, {
-    through: "categoria_producto",
-    foreignKey: "id_categoria",
+    through: "cacao_producto",
+    foreignKey: "id_cacao",
     otherKey: "id_producto",
     timestamps: false,
   })

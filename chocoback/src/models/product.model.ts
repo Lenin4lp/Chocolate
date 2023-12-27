@@ -7,10 +7,13 @@ import {
   BeforeCreate,
   BelongsToMany,
   HasMany,
+  BelongsTo,
 } from "sequelize-typescript";
 import { v4 as uuidv4 } from "uuid";
 import { Category } from "./categories.model";
 import { OrderDetail } from "./order_detail.model";
+import { Cacao } from "./cacao.model";
+import { Flavor } from "./flavor.model";
 
 @Table({ tableName: "products", timestamps: false })
 export class Product extends Model {
@@ -24,46 +27,53 @@ export class Product extends Model {
   product_id!: string;
 
   @Column({
-    type: DataType.STRING(10),
+    type: DataType.STRING(50),
     allowNull: false,
     field: "nombre_producto",
   })
   product_name!: string;
 
   @Column({
-    type: DataType.STRING(4),
-    allowNull: false,
-    field: "porcentaje_cacao",
-  })
-  cocoa_percentage!: string;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
+    type: DataType.STRING(10),
     allowNull: false,
     field: "gramaje",
   })
   weight!: string;
 
   @Column({
-    type: DataType.STRING(20),
+    type: DataType.BOOLEAN,
     allowNull: false,
     field: "sabor",
   })
-  flavor!: string;
+  flavor!: boolean;
 
   @Column({
     type: DataType.DECIMAL(5, 2),
     allowNull: false,
     field: "costo_producto",
   })
-  product_price!: string;
+  product_price!: number;
 
   @Column({
-    type: DataType.STRING(20),
+    type: DataType.DECIMAL(5, 2),
     allowNull: false,
-    field: "categoria_producto",
+    field: "costo_maximo",
   })
-  product_category!: string;
+  max_price!: number;
+
+  @Column({
+    type: DataType.STRING(150),
+    allowNull: false,
+    field: "image",
+  })
+  image!: string;
+
+  @Column({
+    type: DataType.BOOLEAN,
+    allowNull: false,
+    field: "en_stock",
+  })
+  on_stock!: boolean;
 
   @BelongsToMany(() => Category, {
     through: "categoria_producto",
@@ -73,12 +83,28 @@ export class Product extends Model {
   })
   categories!: Category[];
 
+  @BelongsToMany(() => Cacao, {
+    through: "cacao_producto",
+    foreignKey: "id_producto",
+    otherKey: "id_cacao",
+    timestamps: false,
+  })
+  cacao!: Cacao[];
+
+  @BelongsToMany(() => Flavor, {
+    through: "sabor_producto",
+    foreignKey: "id_producto",
+    otherKey: "id_sabor",
+    timestamps: false,
+  })
+  flavors!: Flavor[];
+
   @HasMany(() => OrderDetail)
   order_details!: OrderDetail[];
 
   @BeforeCreate
   static async createUUID(product: Product) {
-    const uuid = uuidv4().substring(0, 10);
+    const uuid = uuidv4().substring(0, 9);
     product.product_id = uuid;
   }
 }

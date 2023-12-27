@@ -18,7 +18,7 @@ export const getCategory = async (req: Request, res: Response) => {
 
 // ? Create category
 export const createCategory = async (req: Request, res: Response) => {
-  const { category_name, description } = req.body;
+  const { category_name } = req.body;
 
   try {
     const categoryFound = await Category.findOne({
@@ -30,7 +30,6 @@ export const createCategory = async (req: Request, res: Response) => {
 
     const newCategory = await Category.create({
       category_name,
-      description,
     });
     res.json(newCategory);
   } catch (error) {
@@ -40,12 +39,11 @@ export const createCategory = async (req: Request, res: Response) => {
 
 // ? Update category
 export const updateCategory = async (req: Request, res: Response) => {
-  const { category_name, description } = req.body;
+  const { category_name } = req.body;
   const category = await Category.findByPk(req.params.id);
   if (category) {
     await category.update({
       category_name,
-      description,
     });
   } else {
     return res.status(404).json({ message: "Category not found" });

@@ -12,7 +12,7 @@ function Footer() {
               <div className=" flex justify-start items-center ">
                 <img
                   className=" h-[60px] md:h-[80px] w-auto"
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284043&authkey=%21APA2qvvEqg88wIc&width=1165&height=499"
+                  src="https://softdeveral.com/assets/Chocoleyenda-logo-oficial%20%281%29.webp"
                   alt=""
                 />
               </div>

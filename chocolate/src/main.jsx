@@ -11,6 +11,11 @@ const LazyServices = React.lazy(() => import("./pages/services/Services.jsx"));
 const LazyContact = React.lazy(() => import("./pages/contact/Contact.jsx"));
 const LazyAbout = React.lazy(() => import("./pages/aboutUs/AboutUs.jsx"));
 const LazyShop = React.lazy(() => import("./pages/shop/Shop.jsx"));
+const LazyProduct = React.lazy(() => import("./pages/shop/Product.jsx"));
+const LazyCart = React.lazy(() => import("./pages/shop/Cart.jsx"));
+const LazyCheckOut = React.lazy(() => import("./pages/shop/CheckOut.jsx"));
+import { ProductProvider } from "./context/ProductProvider.jsx";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +62,30 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: "/cart",
+        element: (
+          <Suspense>
+            <LazyCart />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/checkout",
+        element: (
+          <Suspense>
+            <LazyCheckOut />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/tienda/producto/:id",
+        element: (
+          <Suspense>
+            <LazyProduct />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
@@ -65,6 +94,12 @@ export default function NavbarOutlet() {}
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ProductProvider>
+      <ShoppingCartProvider>
+        <div className=" font-serif">
+          <RouterProvider router={router} />
+        </div>
+      </ShoppingCartProvider>
+    </ProductProvider>
   </React.StrictMode>
 );

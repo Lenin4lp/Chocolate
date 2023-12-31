@@ -1,18 +1,25 @@
 import { Request, Response } from "express";
 import { Product } from "../models/product.model";
 import { connection } from "../connection/connection";
+import { Cacao } from "../models/cacao.model";
+import { Category } from "../models/categories.model";
+import { Flavor } from "../models/flavor.model";
 
 // ? Get all products
 
 export const getProducts = async (req: Request, res: Response) => {
-  const products = await Product.findAll();
+  const products = await Product.findAll({
+    include: [{ model: Cacao }, { model: Category }, { model: Flavor }],
+  });
   res.json(products);
 };
 
 // ? Get one product
 
 export const getProduct = async (req: Request, res: Response) => {
-  const product = await Product.findByPk(req.params.id);
+  const product = await Product.findByPk(req.params.id, {
+    include: [{ model: Cacao }, { model: Category }, { model: Flavor }],
+  });
 
   if (!product) return res.status(404).json({ message: "Product not found" });
 

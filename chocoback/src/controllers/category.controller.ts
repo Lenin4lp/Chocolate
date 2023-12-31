@@ -1,15 +1,32 @@
 import { Request, Response } from "express";
 import { Category } from "../models/categories.model";
+import { Product } from "../models/product.model";
+import { Cacao } from "../models/cacao.model";
+import { Flavor } from "../models/flavor.model";
 
 // ? Get all categories
 export const getCategories = async (req: Request, res: Response) => {
-  const categories = await Category.findAll();
+  const categories = await Category.findAll({
+    include: [
+      {
+        model: Product,
+        include: [{ model: Cacao }, { model: Flavor }, { model: Category }],
+      },
+    ],
+  });
   res.json(categories);
 };
 
 // ? Get one category
 export const getCategory = async (req: Request, res: Response) => {
-  const category = await Category.findByPk(req.params.id);
+  const category = await Category.findByPk(req.params.id, {
+    include: [
+      {
+        model: Product,
+        include: [{ model: Cacao }, { model: Flavor }, { model: Category }],
+      },
+    ],
+  });
 
   if (!category) return res.status(404).json({ message: "Category not found" });
 

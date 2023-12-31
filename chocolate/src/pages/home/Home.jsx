@@ -1,24 +1,18 @@
 import React from "react";
-import Slider from "../../components/Slider";
+
 import Footer from "../../components/Footer";
 
 function Home() {
-  let slides = [
-    `https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284041&authkey=%21AHKVWhS8V8FxuQs&width=1920&height=1024`,
-    `https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284042&authkey=%21ADnHfwz4-CLAZjc&width=1920&height=1078`,
-    `https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284039&authkey=%21ADhnnJQqIVLgIfE&width=1920&height=1141`,
-  ];
-
   return (
     <div className=" w-screen h-screen overflow-x-hidden">
       <img
-        src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284041&authkey=%21AHKVWhS8V8FxuQs&width=1920&height=1024"
+        src="https://softdeveral.com/assets/hands-2430200_1920%20%281%29%20%282%29.webp"
         alt=""
         className=" absolute w-screen h-screen  object-cover z-[-2]"
       />
       <div className="absolute w-screen h-screen bg-black/60 z-[-1]"></div>
       <div className=" block z-30">
-        <div className=" h-[87px] md:h-screen w-screen bg-cover bg-[url('https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284046&authkey=%21AAxdRKKpGSb5Y3o&width=2048&height=1280')]">
+        <div className=" h-[87px] md:h-screen w-screen bg-cover bg-[url('https://softdeveral.com/assets/391615705_816731297122933_8153192096835228882_n%20%281%29%20%281%29.webp')]">
           <div className=" flex justify-center items-center">
             <h1></h1>
           </div>
@@ -35,7 +29,7 @@ function Home() {
                 <div className=" h-fit grid grid-cols-1 md:grid-cols-2">
                   <div className=" flex justify-center md:justify-end px-4 items-center">
                     <img
-                      src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284048&authkey=%21AL92vGbOwcdyG8I&width=1280&height=851"
+                      src="https://softdeveral.com/assets/cocoa-452911_1280%20%281%29%20%281%29.webp"
                       alt=""
                       width={`250px`}
                       height={`175px`}
@@ -43,7 +37,7 @@ function Home() {
                   </div>
                   <div className=" flex justify-center md:justify-start px-4 items-center">
                     <img
-                      src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284049&authkey=%21APm7JHSkX0hHkNY&width=1280&height=853"
+                      src="https://softdeveral.com/assets/cacao-bean-2522918_1280%20%281%29%20%281%29.webp"
                       alt=""
                       width={`250px`}
                       height={`175px`}
@@ -67,7 +61,7 @@ function Home() {
             </div>
             <div className=" flex justify-center items-center h-full p-5">
               <img
-                src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284050&authkey=%21AOWaQWXNoGonPVU&width=1440&height=1920"
+                src="https://softdeveral.com/assets/ghana-2842927_1920%20%281%29.webp"
                 alt=""
                 className=" h-[80vh] w-[80vh] object-cover"
               />
@@ -86,21 +80,7 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className=" h-screen w-screen bg-[#e9e9e9]">
-          <div className=" grid grid-cols-1 md:grid-cols-2">
-            <div className=" flex justify-start items-center m-7 md:m-10">
-              <div className=" block">
-                <p className=" text-sm md:text-base text-left font-normal">
-                  SOMOS TU SOCIO ESTRATÉGICO
-                </p>
-                <h1 className=" text-[25px] md:text-[40px] font-medium">
-                  TRAE TU FÓRMULA TE AYUDAMOS A CUMPLIR TU SUEÑO
-                </h1>
-                <div className=" w-[10vw] h-[4px] my-5 bg-black"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <Footer />
       </div>
     </div>

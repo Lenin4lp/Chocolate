@@ -16,7 +16,7 @@ export const getCacao = async (req: Request, res: Response) => {
 
 // ? Create cacao
 export const createCacao = async (req: Request, res: Response) => {
-  const { cocoa_percentage } = req.body;
+  const { cocoa_percentage, image } = req.body;
   try {
     const cacaoFound = await Cacao.findOne({
       where: { cocoa_percentage: cocoa_percentage },
@@ -26,6 +26,7 @@ export const createCacao = async (req: Request, res: Response) => {
     }
     const newCacao = await Cacao.create({
       cocoa_percentage,
+      image,
     });
     res.json(newCacao);
   } catch (error) {
@@ -35,11 +36,12 @@ export const createCacao = async (req: Request, res: Response) => {
 
 // ? Update cacao
 export const updateCacao = async (req: Request, res: Response) => {
-  const { cocoa_percentage } = req.body;
+  const { cocoa_percentage, image } = req.body;
   const cacao = await Cacao.findByPk(req.params.id);
   if (cacao) {
     await cacao.update({
       cocoa_percentage,
+      image,
     });
   } else {
     return res.status(404).json({ message: "Cacao not found" });

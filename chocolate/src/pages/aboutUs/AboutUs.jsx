@@ -6,7 +6,7 @@ function AboutUs() {
   return (
     <div className=" w-full h-screen overflow-x-hidden">
       <img
-        src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284041&authkey=%21AHKVWhS8V8FxuQs&width=1920&height=1024"
+        src="https://softdeveral.com/assets/hands-2430200_1920%20%281%29%20%282%29.webp"
         alt=""
         className=" absolute w-screen h-screen  object-cover z-[-2]"
       />
@@ -81,19 +81,19 @@ function AboutUs() {
               <div className=" grid grid-cols-3 p-5 md:p-10">
                 <div>
                   <img
-                    src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284059&authkey=%21APHKvgJJyuY3p8s&width=800&height=800"
+                    src="https://softdeveral.com/assets/Cert4-.webp"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
-                    src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284060&authkey=%21AC6oyRNyApS8I5g&width=800&height=800"
+                    src="https://softdeveral.com/assets/Cert5-.webp"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
-                    src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284061&authkey=%21ACjJotzkS45yyu4&width=800&height=800"
+                    src="https://softdeveral.com/assets/Cert6-.webp"
                     alt=""
                   />
                 </div>

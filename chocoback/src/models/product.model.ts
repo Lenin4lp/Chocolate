@@ -14,6 +14,7 @@ import { Category } from "./categories.model";
 import { OrderDetail } from "./order_detail.model";
 import { Cacao } from "./cacao.model";
 import { Flavor } from "./flavor.model";
+import { Order } from "./order.model";
 
 @Table({ tableName: "products", timestamps: false })
 export class Product extends Model {

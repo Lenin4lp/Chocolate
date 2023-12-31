@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className=" w-screen h-screen overflow-x-hidden">
       <img
-        src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284042&authkey=%21ADnHfwz4-CLAZjc&width=1920&height=1078"
+        src="https://softdeveral.com/assets/cacao-3995994_1920%20%281%29%20%281%29.webp"
         alt=""
         className=" absolute w-screen h-screen  object-cover z-[-2]"
       />
@@ -131,7 +131,7 @@ function Contact() {
                     <div className=" flex justify-center md:justify-end items-center mx-8">
                       <h1></h1>
                       <input
-                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        className=" border border-slate-400 rounded m-5 w-60 h-9"
                         type="text"
                         placeholder=" Nombre"
                       />
@@ -139,7 +139,7 @@ function Contact() {
                     <div className=" flex justify-center md:justify-start items-center mx-8">
                       <h1></h1>
                       <input
-                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        className=" border border-slate-400 rounded m-5 w-60 h-9"
                         type="text"
                         placeholder=" Email"
                       />
@@ -147,7 +147,7 @@ function Contact() {
                     <div className=" flex justify-center md:justify-end items-center mx-8">
                       <h1></h1>
                       <input
-                        className=" border border-slate-300 rounded m-5 w-60 h-9"
+                        className=" border border-slate-400 rounded m-5 w-60 h-9"
                         type="text"
                         placeholder=" Asunto"
                       />
@@ -155,7 +155,7 @@ function Contact() {
 
                     <div></div>
                   </div>
-                  <div className=" flex justify-center items-center mx-5 md:mx-32 lg:mx-72 border border-slate-300 rounded mt-9">
+                  <div className=" flex justify-center items-center mx-5 md:mx-32 lg:mx-72 border border-slate-400 rounded mt-9">
                     <textarea
                       type="text"
                       className=" h-56 w-full"

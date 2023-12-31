@@ -5,7 +5,7 @@ function Services() {
   return (
     <div className=" w-screen h-screen overflow-x-hidden">
       <img
-        src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284042&authkey=%21ADnHfwz4-CLAZjc&width=1920&height=1078"
+        src="https://softdeveral.com/assets/cacao-3995994_1920%20%281%29%20%281%29.webp"
         alt=""
         className=" absolute w-screen h-screen  object-cover z-[-2]"
       />
@@ -28,7 +28,7 @@ function Services() {
             <div className=" grid grid-cols-1 md:grid-cols-2">
               <div className=" mt-5 lg:mt-10">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284051&authkey=%21AMwVIDCPaa7yUXs&width=578&height=323"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20180824.webp"
                   alt=""
                 />
               </div>
@@ -64,7 +64,7 @@ function Services() {
               </div>
               <div className=" md:m-5 mb-5 ">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284052&authkey=%21AJCLnG9evUp459I&width=576&height=324"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20181137.webp"
                   alt=""
                 />
               </div>
@@ -72,7 +72,7 @@ function Services() {
             <div className=" grid grid-cols-1 md:grid-cols-2">
               <div className=" md:m-5 ">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284053&authkey=%21AAvrPvBHcJBxszg&width=578&height=325"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20181459.webp"
                   alt=""
                 />
               </div>
@@ -107,7 +107,7 @@ function Services() {
               </div>
               <div className=" md:m-5 mb-5 ">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284054&authkey=%21AJuQ9lnar0AD4f0&width=578&height=323"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20181756.webp"
                   alt=""
                 />
               </div>
@@ -115,7 +115,7 @@ function Services() {
             <div className=" grid grid-cols-1 md:grid-cols-2">
               <div className=" md:m-5 ">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284055&authkey=%21ADYHbNnDlPcNXAI&width=578&height=325"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20182027%20%281%29.webp"
                   alt=""
                 />
               </div>
@@ -147,7 +147,7 @@ function Services() {
               </div>
               <div className=" md:m-5 mb-5">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284056&authkey=%21AM6w9S2Qh1-E4U0&width=577&height=325"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20182235%20%281%29.webp"
                   alt=""
                 />
               </div>
@@ -155,7 +155,7 @@ function Services() {
             <div className=" grid grid-cols-1 md:grid-cols-2">
               <div className=" md:m-5 ">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284057&authkey=%21AI3SBqnPSblBRHM&width=579&height=383"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20182446%20%281%29.webp"
                   alt=""
                 />
               </div>
@@ -187,7 +187,7 @@ function Services() {
               </div>
               <div className=" md:m-5 mb-14">
                 <img
-                  src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284058&authkey=%21AMDi4TprH9MFK6k&width=577&height=324"
+                  src="https://softdeveral.com/assets/Captura%20de%20pantalla%202023-12-10%20182702%20%281%29.webp"
                   alt=""
                 />
               </div>

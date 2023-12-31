@@ -20,7 +20,7 @@ function Navbar() {
           <Link to="/">
             <img
               className=" h-14 md:h-24 w-auto object-contain"
-              src="https://onedrive.live.com/embed?resid=C8B0FA3060147D42%21284043&authkey=%21APA2qvvEqg88wIc&width=1165&height=499"
+              src="https://softdeveral.com/assets/Chocoleyenda-logo-oficial%20%281%29.webp"
               alt=""
             />
           </Link>

@@ -27,6 +27,13 @@ export class Cacao extends Model {
   })
   cocoa_percentage!: string;
 
+  @Column({
+    type: DataType.STRING(150),
+    allowNull: false,
+    field: "imagen",
+  })
+  image!: string;
+
   @BelongsToMany(() => Product, {
     through: "cacao_producto",
     foreignKey: "id_cacao",
